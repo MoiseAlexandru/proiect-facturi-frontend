@@ -55,3 +55,57 @@ li:hover {
     align-items: center;
     justify-content: center;
 }
+
+.createFacturaForm {
+    margin: auto;
+    width: 60rem;
+}
+
+.createFacturaForm button {
+    width: 10%;
+    margin-top: 1rem;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+.createFacturaContainer {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.textError {
+    color: red;
+    margin-top: 0.5rem;
+}
+
+.facturaDetaliataContainer {
+    width: 60rem;
+    margin: auto;
+}
+
+.button-left {
+    width: 20%;
+}
+
+.button-right {
+    width: 20%;
+    margin: auto;
+    float: right;
+}
+
+.editDetaliiFacturaContainer button {
+    width: 16%;
+    margin-top: 1rem;
+    margin-left: 43%;
+    margin-right: 43%;
+}
+
+.containerButoane {
+    width: 100%;
+}
+
+.backButton {
+    height: 5rem;
+    width: 5rem;
+    position: fixed;
+}

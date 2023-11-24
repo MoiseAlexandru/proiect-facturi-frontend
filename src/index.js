@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import './index.css';
-import App from './App';
-import ListaFacturi from './components/ListaFacturi';
-import Factura from './components/Factura';
+import App from './App';;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
