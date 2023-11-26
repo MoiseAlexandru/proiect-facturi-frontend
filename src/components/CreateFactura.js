@@ -38,7 +38,7 @@ export default function CreateFactura() {
             <Form className = "createFacturaForm">
                 <Row className = "mb-3">
                     <Form.Group as = {Col} controlId = "formGridNumarFactura">
-                        <Form.Label> NumarFactura </Form.Label>
+                        <Form.Label> Numar Factura </Form.Label>
                         <Form.Control value = {numarFactura} onChange = {(e) => {setNumarFactura(e.target.value)}} required />
                     </Form.Group>
                     <Form.Group as = {Col} controlId = "formGridNumeClient">
@@ -48,12 +48,12 @@ export default function CreateFactura() {
                 </Row>
                 <Row className = "mb-3">
                     <Form.Group as = {Col} controlId = "formGridIdLocatie">
-                        <Form.Label> IdLocatie </Form.Label>
+                        <Form.Label> Id Locatie </Form.Label>
                         <Form.Control type = "number" value = {idLocatie} placeholder = "ex. 10212" onChange = {(e) => {setIdLocatie(Number(e.target.value))}} required />
                     </Form.Group>
                     <Form.Group as = {Col} controlId = "formGridDataFacturare">
                         <Form.Label> Data Facturare </Form.Label>
-                        <Form.Control type = "date" onChange = {(e) => {setDataFacturare(new Date(e.target.value))}} required />
+                        <Form.Control type = "date" onChange = {(e) => {setDataFacturare(e.target.value)}} required />
                     </Form.Group>
                 </Row>
                 {!isSubmitting && <Button variant = "success" onClick = {handleSubmit}> Adauga </Button>}

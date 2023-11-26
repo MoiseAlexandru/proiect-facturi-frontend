@@ -10,7 +10,7 @@ import editFactura from "../api/editFactura";
 import editDetaliiFactura from "../api/editDetaliiFactura";
 import deleteFactura from "../api/deleteFactura";
 
-export default function Factura({id}) {
+export default function FacturaDetaliata ({id}) {
     
     const [isLoading, setIsLoading] = useState(false);
 
@@ -75,15 +75,10 @@ export default function Factura({id}) {
         const res = await editFactura(id, factura);
         if(!res.ok)
             setFacturaHasError(true);
-        else
+        else {
             setFacturaHasError(false);
-        /*
-        else
-        {
-            const detaliiFacturaId = await res.json();
-            navigate(`/detaliifactura/${detaliiFacturaId}`, {replace: true});
+            navigate("/", {replace: true});
         }
-        */
         setIsSubmitting(false);
     }
 
@@ -100,8 +95,10 @@ export default function Factura({id}) {
         const res = await editDetaliiFactura(idDetaliiFactura, detaliiFactura);
         if(!res.ok)
             setDetaliiFacturaHasError(true);
-        else
+        else {
             setFacturaHasError(false);
+            navigate(`/`, {replace: true});
+        }
         setIsSubmitting(false);
     }
 
@@ -130,9 +127,9 @@ export default function Factura({id}) {
                         <Form.Group as = {Col} controlId = "formGridDataFacturare">
                             <Form.Label> Data Facturare </Form.Label>
                             <Form.Control
-                                value={dataFacturare ? new Date(dataFacturare).toISOString().split('T')[0] : ''}
-                                type = "date"
-                                onChange = {(e) => {setDataFacturare(new Date(e.target.value))}}
+                                value={dataFacturare}
+                                type = "datetime-local"
+                                onChange = {(e) => {setDataFacturare(e.target.value)}}
                             />
                         </Form.Group>
                     </Row>
